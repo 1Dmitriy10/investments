@@ -1,0 +1,110 @@
+.decisions {
+    background: url("../img/decisions/decisions__bg.png") center / cover no-repeat;
+    @media (max-width: 890px) {
+        background: none !important;
+        background-color: #000000 !important;
+    }
+}
+.decisions__container {
+    padding: 180px 10px 129px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.decisions__title {
+    margin-bottom: 80px;
+    color: #ede5da;
+    align-self: center;
+}
+.decisions__content-box {
+    display: grid;
+    grid-template-columns: 1fr minmax(180px, 400px) 1fr;
+    grid-template-rows: 1fr;
+    & :last-child {
+        justify-self: end;
+        @media (max-width: 890px) {
+            align-items: center;
+            justify-self: center;
+        }
+    }
+    @media (max-width: 890px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+        gap: 40px;
+    }
+}
+.decisions__content-item {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 890px) {
+        align-items: center;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+.decisions__title {
+}
+.decisions__subtitle {
+    @include adaptiveValue(font-size, 14.3, 12);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ede5da;
+    max-width: 300px;
+    margin-bottom: 28px;
+    margin: 28px 0;
+    @media (max-width: 889px) {
+        color: #3157ad;
+        @include adaptiveValue(font-size, 30, 12);
+        max-width: 100%;
+    }
+    @media (max-width: 500px) {
+        text-align: center;
+    }
+}
+.decisions__btn {
+    align-self: flex-start;
+    @media (max-width: 890px) {
+        align-self: center;
+    }
+}
+.wrap-img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: prop(450, 300);
+}
+.img-bg {
+}
+.btn_transparent {
+    background-color: transparent;
+    color: #3157ad;
+    border: 2px solid #3157ad;
+}
+.decisions__img {
+    width: 50px;
+}
+.decisions__wrap {
+    @media (max-width: 890px) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 70%;
+        justify-self: center;
+        padding-bottom: prop(550, 571);
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+        padding-bottom: prop(650, 500);
+    }
+}
+.decisions__num {
+    font-size: 66.5px;
+    line-height: 66px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: #ede5da;
+    margin-bottom: 28px;
+    margin: 28px 0;
+    @media (max-width: 889px) {
+        color: #3157ad;
+    }
+}
