@@ -1117,6 +1117,7 @@ body {
 }
 
 .popup__container {
+  position: relative;
   width: 70%;
   height: 80dvh;
   background-color: white;
@@ -1160,7 +1161,7 @@ body {
 }
 @media (max-width: 768px) {
   .form {
-    height: 70dvh;
+    height: 80dvh;
     width: 100%;
   }
 }
