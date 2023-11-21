@@ -1136,7 +1136,7 @@ body {
 
 .popup-exit {
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 10px;
   width: 30px;
   height: 30px;
@@ -1150,6 +1150,10 @@ body {
   transform: scale(1.2);
 }
 
+.send-message {
+  margin-bottom: 15px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -1161,7 +1165,7 @@ body {
 }
 @media (max-width: 768px) {
   .form {
-    height: 100dvh;
+    height: 100%;
     width: 100%;
   }
 }
