@@ -27,7 +27,7 @@
     padding: 10px;
     @media (max-width: 768px) {
         height: 100dvh;
-        width: 80vw;
+        width: 100vw;
     }
 }
 .popup-exit {
@@ -38,7 +38,7 @@
     height: 30px;
     font-size: 1.5em;
     transition: 0.2s;
-    color: white;
+    color: #3157ad;
     cursor: pointer;
     &:hover {
         transition: 0.2s;

@@ -8,12 +8,12 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     border: 3px solid #3157ad;
     border-radius: 10px;
     padding: 20px 10px;
     @media (max-width: 768px) {
-        height: 80dvh;
+        height: 70dvh;
         width: 100%;
     }
 }
@@ -30,7 +30,7 @@
     color: #3157ad;
 }
 .form__input {
-    padding: 15px;
+    padding: 10px 15px;
     border: 2px solid #3157ad;
     border-radius: 8px;
     background-color: transparent;
