@@ -7,10 +7,15 @@
 .form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
     border: 3px solid #3157ad;
     border-radius: 10px;
     padding: 20px 10px;
+    @media (max-width: 768px) {
+        height: 80dvh;
+        width: 100%;
+    }
 }
 .form__row {
     display: flex;
@@ -88,4 +93,7 @@
 }
 ._red {
     color: red;
+}
+._green {
+    color: green;
 }

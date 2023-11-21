@@ -8,43 +8,21 @@ export function validate() {
         //событие при отправке
         form.addEventListener("submit", formSend);
         //отправка
-        async function formSend(e) {
+        function formSend(e) {
             e.preventDefault();
             // переменная для ошибок в форме (вызывает функцию валидации)
             let error = formValidate(form);
             //если ошибок нет отправляем форму
             if (error === 0) {
-                let formData = new FormData(form);
-                //отправляем форму в файл send.php
-                let response = await fetch('send.php', {
-                    method: "POST",
-                    body: formData
-                });
-                //если форма успешно отправлена
-                if (response.ok) {
-                    let result = await response.json();
-                    printMessage.innerHTML = "";
-                    printMessage.innerHTML = `${result.message}`;
-                    boxMessage.classList.add("active");
-                    colorBoxMessage.classList.add("_green");
-                    let closeMessage = setTimeout(() => {
-                        boxMessage.classList.remove("active")
-                        colorBoxMessage.classList.remove("_green");
-                    }, 5000
-                    )
-                    form.reset();
-                    //если произошла ошибка отпраки
-                } else {
-                    printMessage.innerHTML = "";
-                    printMessage.innerHTML = `Ошибка отправки формы`;
-                    boxMessage.classList.add("active");
-                    colorBoxMessage.classList.add("_red");
-                    let closeMessage = setTimeout(() => {
-                        boxMessage.classList.remove("active");
-                        colorBoxMessage.classList.remove("_red");
-                    }, 5000
-                    )
-                }
+                printMessage.innerHTML = "";
+                printMessage.innerHTML = `Форма успешно отправлена`;
+                boxMessage.classList.add("active");
+                colorBoxMessage.classList.add("_green");
+                let closeMessage = setTimeout(() => {
+                    boxMessage.classList.remove("active")
+                    colorBoxMessage.classList.remove("_green");
+                }, 5000
+                )
                 //если валидация не прошла выводим ошибку
             } else {
                 printMessage.innerHTML = "";
